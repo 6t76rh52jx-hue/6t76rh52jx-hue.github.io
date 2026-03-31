@@ -1,1 +1,15 @@
-<html><body>Jarvis App Link</body></html>
+<html>
+<head><title>Jarvis</title></head>
+<body>
+<script>
+// Redirect to Jarvis app via custom URL scheme
+var params = window.location.search || window.location.hash;
+var path = window.location.pathname;
+var target = "mwdat-1214704057182320://" + path + params;
+window.location.href = target;
+</script>
+<p>Redirecting to Jarvis...</p>
+<p>If nothing happens, <a id="link">tap here</a>.</p>
+<script>document.getElementById('link').href = target;</script>
+</body>
+</html>
